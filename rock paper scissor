@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <button onclick=" let computerMove='';
+ var randomNumber = Math.random(); 
+ if(randomNumber>=0 && randomNumber <1/3)
+  {computerMove ='rock';}
+  else if(randomNumber>=1/3 && randomNumber <2/3)
+  {computerMove = 'paper';}
+  else if(randomNumber>=2/3 && randomNumber <1)
+  {computerMove = ' scissor';}
+  var result='';
+  if(computerMove === 'rock'){result='tie'};
+  if(computerMove === 'paper'){result='lose'};
+  if(computerMove === 'scissor'){result='win'};
+
+  alert(`Your move was rock . Computer move was ${computerMove} .Result is ${result}`);
+  
+  ">rock </button>
+
+  <button onclick="
+  var randomNumber=Math.random(); 
+  if(randomNumber>=0 && randomNumber <1/3)
+   {computerMove='rock';}
+   else if(randomNumber>=1/3 && randomNumber <2/3)
+   {computerMove='paper';}
+   else if(randomNumber>=2/3 && randomNumber <1)
+   {computerMove='scissor';}
+   var result='';
+   if(computerMove==='rock'){result='win'};
+   if(computerMove==='paper'){result='tie'};
+   if(computerMove==='scissor'){result='lose'};
+ 
+   alert(`Your move was paper . Computer move was ${computerMove} .Result is ${result}`);
+   ">paper</button>
+
+  <button onclick="var randomNumber=Math.random(); 
+  if(randomNumber>=0 && randomNumber <1/3)
+   {computerMove='rock';}
+   else if(randomNumber>=1/3 && randomNumber <2/3)
+   {computerMove='paper';}
+   else if(randomNumber>=2/3 && randomNumber <1)
+   {computerMove='scissor';}
+   var result='';
+   if(computerMove==='rock'){result='lose'};
+   if(computerMove==='paper'){result='win'};
+   if(computerMove==='scissor'){result='tie'};
+ 
+   alert(`Your move was scissor . Computer move was ${computerMove} .Result is ${result}`);">scrissor</button>
+
+  <script>
+    const randomNumber = Math.random();
+
+  </script>
+</body>
+
+</html>
