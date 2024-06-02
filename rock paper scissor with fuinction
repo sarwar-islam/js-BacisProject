@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <button onclick="
+   pickComputerMove();
+   playGame('rock');
+  ">rock</button>
+
+  <button onclick="
+   pickComputerMove();
+   playGame('paper');
+   
+  ">paper</button>
+
+  <button onclick="
+   pickComputerMove();
+   playGame('scissor');
+  ">scrissor</button>
+
+  <script>
+    function playGame(playerMove) {
+      var result = '';
+      if (playerMove === 'scissor') {
+        if (computerMove === 'rock') { result = 'lose' }
+        else if (computerMove === 'paper') { result = 'win' }
+        else if (computerMove === 'scissor') { result = 'tie' };
+
+        alert(`Your move was ${playerMove} . Computer move was ${computerMove} .Result is ${result}`)
+
+      }
+      else if (playerMove === 'paper') {
+        var result = '';
+        if (computerMove === 'rock') { result = 'win' };
+        if (computerMove === 'paper') { result = 'tie' };
+        if (computerMove === 'scissor') { result = 'lose' };
+
+        alert(`Your move was ${playerMove} . Computer move was ${computerMove} .Result is ${result}`)
+
+      }
+      else if (playerMove === 'rock') {
+        var result = '';
+        if (computerMove === 'rock') { result = 'tie' };
+        if (computerMove === 'paper') { result = 'lose' };
+        if (computerMove === 'scissor') { result = 'win' };
+
+        alert(`Your move was ${playerMove} . Computer move was ${computerMove} .Result is ${result}`);
+
+      }
+
+
+    }
+
+    const randomNumber = Math.random();
+
+    function pickComputerMove() {
+      var randomNumber = Math.random();
+      if (randomNumber >= 0 && randomNumber < 1 / 3) { computerMove = 'rock'; }
+      else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) { computerMove = 'paper'; }
+      else if (randomNumber >= 2 / 3 && randomNumber < 1) { computerMove = 'scissor'; }
+    }
+
+  </script>
+</body>
+
+</html>
